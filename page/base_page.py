@@ -4,7 +4,7 @@ Version: 1.0
 Author: Penn
 Date: 2020-05-19 20:06:04
 LastEditors: Penn
-LastEditTime: 2020-10-30 11:44:01
+LastEditTime: 2020-10-30 13:56:53
 '''
 import inspect
 import yaml
@@ -76,7 +76,7 @@ class BasePage:
             if "action" in step.keys():
                 action = step["action"]
             if action == "count":
-                elements = self.finds(step["by"], step["locator"])
+                elements: list = self.finds(step["by"], step["locator"])
                 return elements
             element = self.find(step["by"], step["locator"])
             if action == "click":
@@ -84,7 +84,7 @@ class BasePage:
             elif action == "send_keys":
                 element.send_keys(step["value"])
             elif action == "text":
-                element = element.text
+                element: WebElement = element.text
                 return element
             elif action == "attribute":
                 element = element.get_attribute(step["value"])
