@@ -1,0 +1,16 @@
+add_member:
+  - by: id
+    locator: username
+    action: send_keys
+    value: pengshuai
+  - by: id
+    locator: memberAdd_acctid
+    action: send_keys
+    value: ewqsdad
+  - by: id
+    locator: memberAdd_phone
+    action: send_keys
+    value: 15000000001
+  - by: css selector
+    locator: .js_btn_save
+    action: click

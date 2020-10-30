@@ -1,0 +1,4 @@
+goto_address_book:
+  - by: id
+    locator: menu_contacts
+    action: click

@@ -1,0 +1,20 @@
+goto_addmember:
+  - by: css selector
+    locator: .js_has_member>div:nth-child(1)>a:nth-child(2)
+    action: wait
+    action_angin: click
+
+update_page:
+  - by: css selector
+    locator: .ww_pageNav_info_text
+    action: count
+
+get_member:
+  - by: css selector
+    locator: .member_colRight_memberTable_td:nth-child(2)
+    action: count
+
+next_page:
+  - by: css selector
+    locator: .js_next_page
+    action: click
