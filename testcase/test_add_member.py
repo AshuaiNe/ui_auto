@@ -4,7 +4,7 @@ Version: 1.0
 Author: Penn
 Date: 2020-10-29 12:12:05
 LastEditors: Penn
-LastEditTime: 2020-10-30 18:08:07
+LastEditTime: 2020-11-05 14:37:33
 '''
 import allure
 import pytest

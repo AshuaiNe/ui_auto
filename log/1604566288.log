@@ -1,0 +1,9 @@
+2020-11-05 16:51:29,715 - base_page.py[line:49] - INFO: 单元素查找：self._driver.find_element(id, menu_contacts)
+2020-11-05 16:51:29,993 - base_page.py[line:49] - INFO: 单元素查找：self._driver.find_element(css selector, .js_has_member>div:nth-child(1)>a:nth-child(2))
+2020-11-05 16:51:30,019 - base_page.py[line:46] - INFO: 单元素查找：self._driver.find_element(('css selector', '.js_has_member>div:nth-child(1)>a:nth-child(2)'))元组
+2020-11-05 16:51:30,203 - base_page.py[line:49] - INFO: 单元素查找：self._driver.find_element(id, username)
+2020-11-05 16:51:30,248 - base_page.py[line:49] - INFO: 单元素查找：self._driver.find_element(id, memberAdd_acctid)
+2020-11-05 16:51:30,305 - base_page.py[line:49] - INFO: 单元素查找：self._driver.find_element(id, memberAdd_phone)
+2020-11-05 16:51:30,362 - base_page.py[line:49] - INFO: 单元素查找：self._driver.find_element(css selector, .js_btn_save)
+2020-11-05 16:51:35,999 - base_page.py[line:59] - INFO: 多元素查找：self._driver.find_elements(css selector, .ww_pageNav_info_text)
+2020-11-05 16:51:36,050 - base_page.py[line:59] - INFO: 多元素查找：self._driver.find_elements(css selector, .member_colRight_memberTable_td:nth-child(2))

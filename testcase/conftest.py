@@ -4,10 +4,12 @@ Version: 1.0
 Author: Penn
 Date: 2020-10-29 14:01:45
 LastEditors: Penn
-LastEditTime: 2020-10-30 18:01:43
+LastEditTime: 2020-11-05 16:28:09
 '''
-import os
 import sys
+from pathlib import Path
+import os
+# BASE_DIR = Path(__file__).parent.parent
 BASE_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 sys.path.append(BASE_DIR)
 from page.main import Main
