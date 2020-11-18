@@ -4,7 +4,7 @@ Version: 1.0
 Author: Penn
 Date: 2020-05-19 20:29:58
 LastEditors: Penn
-LastEditTime: 2020-11-05 15:19:00
+LastEditTime: 2020-11-12 15:13:02
 '''
 from selenium.webdriver.common.by import By
 from page.base_page import BasePage
@@ -16,15 +16,15 @@ class AddMember(BasePage):
         self.steps("./data/add_member.yaml")
         return self
 
+    def next_page(self):
+        self.steps("./data/member.yaml")
+
     def update_page(self):
         content_page: str = self.steps("./data/member.yaml")
         if content_page:
             return [int(_) for _ in content_page.split('/', 1)]
         else:
             return [1, 1]
-
-    def next_page(self):
-        self.steps("./data/member.yaml")
 
     def get_member(self, value):
         self.wait_for_click((By.CSS_SELECTOR, ".ww_checkbox"))
