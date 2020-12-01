@@ -4,7 +4,7 @@ Version: 1.0
 Author: Penn
 Date: 2020-05-19 20:06:04
 LastEditors: Penn
-LastEditTime: 2020-11-05 16:40:47
+LastEditTime: 2020-12-01 15:10:43
 '''
 import inspect
 import json
@@ -16,7 +16,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-from other.BaseLogging import Loggers
+from other.base_logging import Loggers
 
 
 # 二次封装一下driver相关内容

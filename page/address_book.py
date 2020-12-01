@@ -4,9 +4,9 @@ Version: 1.0
 Author: Penn
 Date: 2020-10-29 12:12:05
 LastEditors: Penn
-LastEditTime: 2020-11-05 15:18:33
+LastEditTime: 2020-12-01 15:11:38
 '''
-from page.addmember import AddMember
+from page.add_member import AddMember
 from page.base_page import BasePage
 
 
