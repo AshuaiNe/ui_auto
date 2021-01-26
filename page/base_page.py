@@ -4,7 +4,7 @@ Version: 1.0
 Author: Penn
 Date: 2020-05-19 20:06:04
 LastEditors: Penn
-LastEditTime: 2020-12-11 10:47:36
+LastEditTime: 2021-01-26 13:51:15
 '''
 import inspect
 import json
@@ -67,7 +67,7 @@ class BasePage:
         '''
         sleep(3)直接等待
         self,driver.implicitly_wait(3)隐式等待，轮询查找元素，直到超时
-        WebDriverWait(self.driver, time).until()
+        WebDriverWait(self.driver, time).until()显示等待
         '''
         return WebDriverWait(self._driver, time).until(lambda element: self.find(conditions), message='element not found')
 
@@ -83,29 +83,29 @@ class BasePage:
             for step in steps:
                 if "action" in step.keys():
                     action = step["action"]
-                if action == "count":
-                    elements: list = self.finds(step["by"], step["locator"])
-                    return elements
-                element = self.find(step["by"], step["locator"])
-                if action == "click":
-                    element.click()
-                elif action == "send_keys":
-                    element.send_keys(step["value"])
-                elif action == "text":
-                    element: WebElement = element.text
-                    return element
-                elif action == "attribute":
-                    element = element.get_attribute(step["value"])
-                    return element
-                elif action == "wait":
-                    tuple_conditions = (step["by"], step["locator"])
-                    element = self.wait_for_elem(tuple_conditions)
-                    action_angin = step['action_angin']
-                    if action_angin == "click":
+                    if action == "count":
+                        elements: list = self.finds(step["by"], step["locator"])
+                        return elements
+                    element = self.find(step["by"], step["locator"])
+                    if action == "click":
                         element.click()
+                    elif action == "send_keys":
+                        element.send_keys(step["value"])
                     elif action == "text":
-                        element = element.text
+                        element: WebElement = element.text
                         return element
+                    elif action == "attribute":
+                        element = element.get_attribute(step["value"])
+                        return element
+                    elif action == "wait":
+                        tuple_conditions = (step["by"], step["locator"])
+                        element = self.wait_for_elem(tuple_conditions)
+                        action_angin = step['action_angin']
+                        if action_angin == "click":
+                            element.click()
+                        elif action == "text":
+                            element = element.text
+                            return element
         except NoSuchElementException:
             self._log.logger.info(NoSuchElementException)
             raise EOFError
